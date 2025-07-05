@@ -14,7 +14,7 @@ All services run in their own Docker containers and communicate over a Docker ne
 
 ```bash
 git clone https://github.com/mustafa914/Containers-challenge.git
-cd Containers-challenge
+cd Containers-challenge/flask-redis
 ```
 
 ### 2. Run the project
@@ -33,11 +33,19 @@ This command will:
 
 Visit 👉 [http://localhost:8080](http://localhost:8080)
 
-You should see a message like:
+- You’ll land on the **welcome page**:
+  ```
+  👋 Welcome to Mustafa's website visit counter app
+  ```
+  Click the **"Check visit count"** link to go to `/count`.
 
-```
-Hello! You've visited this page 3 times.
-```
+- The `/count` route shows the visitor count stored in Redis:
+  ```
+  🚀 Visitor Count
+  The website has been visited X times!
+  ```
+
+Each time you refresh `/count`, the counter increments by one. You can navigate back to the homepage using the **"Go back"** link.
 
 ## 🌐 How It Works
 
